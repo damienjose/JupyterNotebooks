@@ -7586,21 +7586,6 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ac316c9b-6bd4-44bc-92ca-8455107156f2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Getting-started-with-TensorRT-LLM">Getting started with TensorRT-LLM<a class="anchor-link" href="#Getting-started-with-TensorRT-LLM">¶</a></h1><p>In this notebook we are optimizing Bloom 560M for inference using TensorRT-LLM. <br/>
-We compare inference speed results from the <strong>baseline</strong> model (Huggingface), the <strong>optimized</strong> model, <br/>
-and the optimized model after <strong>INT8-quantization</strong>.</p>
-<p><em><strong>Source:</strong></em>
-<a href="https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/bloom">https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/bloom</a></p>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=45885a26-ad28-473d-83d8-5c45bfc176d2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8274,8 +8259,8 @@ Average TensorRT-LLM inference time: 0.31 seconds
 <li><strong>Baseline (Hugging Face Transformers)</strong>: ~2.82 seconds for 100 new tokens on a ~1.1B parameter model (TinyLlama).</li>
 <li><strong>TensorRT-LLM (optimized engine)</strong>: ~0.31 seconds for the same workload.</li>
 </ul>
-<p>This represents roughly a <strong>8× speedup</strong> on an A100 GPU for our demo case.<br>
-The generated outputs are equivalent (aside from minor floating-point differences), confirming that optimization did not affect model quality.</br></p>
+<p>This represents roughly a <strong>8× speedup</strong> on an A100 GPU for our demo case.<br/>
+The generated outputs are equivalent (aside from minor floating-point differences), confirming that optimization did not affect model quality.</p>
 <p>TensorRT-LLM achieves these improvements by:</p>
 <ul>
 <li><strong>Fusing kernels</strong> (reducing GPU kernel launches and memory traffic)</li>
@@ -8283,8 +8268,8 @@ The generated outputs are equivalent (aside from minor floating-point difference
 <li><strong>Employing reduced precision (FP16/INT8/FP8)</strong> where possible</li>
 <li><strong>Reusing GPU memory buffers</strong> to lower fragmentation and peak memory use</li>
 </ul>
-<p>These micro-optimizations accumulate into significant latency and throughput gains.<br>
-NVIDIA reports that for larger models and GPUs, the effect is even more dramatic: on Hopper (H100), <strong>TensorRT-LLM plus hardware improvements can yield up to 8× higher throughput</strong> compared to Ampere (A100) without TensorRT-LLM optimizations.</br></p>
+<p>These micro-optimizations accumulate into significant latency and throughput gains.<br/>
+NVIDIA reports that for larger models and GPUs, the effect is even more dramatic: on Hopper (H100), <strong>TensorRT-LLM plus hardware improvements can yield up to 8× higher throughput</strong> compared to Ampere (A100) without TensorRT-LLM optimizations.</p>
 <p>In an official benchmark, NVIDIA demonstrated multi-fold throughput increases using TensorRT-LLM on larger models and GPUs (e.g. &gt;4x speedup on GPT-3-175B on H100 vs A100) – our smaller-scale result here aligns with those optimizations working as intended.
 <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/?utm_source=chatgpt.com">https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/?utm_source=chatgpt.com</a></p>
 </div>
@@ -8295,7 +8280,7 @@ NVIDIA reports that for larger models and GPUs, the effect is even more dramatic
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
